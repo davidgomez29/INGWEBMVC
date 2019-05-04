@@ -1,17 +1,15 @@
 <?php
     include_once("model/Book.php");
-
-    class Model
+    class Model {
+    public function getBookList()
     {
-        public function getBookList()
-        {
-            return array(
-                "libro 1"=> new Book("libro 1", "autor libro 1", "descripcion libro uno."),
-                "libro 2"=> new Book("libro 2", "autor libro 2", "descripcion libro dos"),
-                "libro 3"=> new Book("libro 3", "autor libro 3", "descripcion libro tres.")
-            );
-        }    
-
+    
+        return array(
+        "Libro 1" => new Book("Libro 1", "Autor Libro1", "Descripcion libro uno"),
+        "Libro 2" => new Book("Libro 2", "Autor Libro2", "Descripcion libro dos"),
+        "Libro 3" => new Book("Libro 3", "Autor Libro3", "Descripcion libro tres")
+        );
+    }
         public function getBook($title)
         {
             $allBooks = $this->getBookList();
